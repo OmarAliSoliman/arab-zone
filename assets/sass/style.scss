@@ -1,0 +1,1706 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+$mainColor: #03BBC3;
+
+input,
+select,
+textarea {
+  &:focus {
+    outline: 0 !important;
+  }
+}
+
+body {
+  direction: rtl;
+  font-family: 'Cairo', sans-serif;
+}
+
+.clear {
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+// start top header
+.top-header {
+  padding: 10px;
+
+  .border-bottom {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .info {
+    span:first-child {
+      padding: 10px 0px 10px 10px;
+    }
+
+    span:last-child {
+      padding: 10px 10px 10px 0px;
+    }
+
+    i {
+      color: $mainColor;
+      margin-left: 5px;
+    }
+  }
+
+  .social {
+    text-align: left;
+
+    i {
+      color: #555;
+      margin-right: 5px;
+      transition: all 0.5s ease;
+
+      &:hover {
+        color: $mainColor;
+      }
+    }
+  }
+}
+
+// start bavbar
+.upper-nav {
+  padding: 5px;
+
+  .logo {
+    padding: 5px;
+    text-align: right;
+
+    img {
+      width: 150px;
+    }
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .login {
+    text-align: left;
+    padding-top: 10px;
+
+    ul {
+      li {
+        padding: 15px;
+        display: inline-block;
+
+        .btn-login {
+          color: #444;
+
+          i {
+            font-size: 14px;
+            color: $mainColor;
+            margin-left: 5px;
+          }
+
+          &:hover {
+            border: 1px dashed $mainColor;
+          }
+        }
+
+        .btn-rigister {
+          border: 2px solid $mainColor;
+          color: $mainColor;
+
+          i {
+            font-size: 14px;
+            color: $mainColor;
+            margin-left: 5px;
+          }
+
+          &:hover {
+            background-color: $mainColor;
+            color: #fff;
+
+            // bordeR: 2px solid #fff;
+            i {
+              color: #fff;
+            }
+          }
+        }
+
+        .btn-add-ads {
+          width: 200px;
+          border: 2px solid $mainColor;
+          background-color: $mainColor;
+          color: #fff;
+
+          i {
+            margin-left: 10px;
+          }
+
+          &:hover {
+            background-color: #fff;
+            border: 2px solid $mainColor;
+            color: #000;
+          }
+        }
+      }
+
+      li:last-child {
+        border-right: 1px solid #ddd;
+      }
+
+      .btn-add-ads-parent {
+        border-right: 1px solid #DDD;
+      }
+    }
+  }
+
+  .eng {
+    border-right: 1px solid #ddd;
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+  .my-account-option {
+    border-right: 2px solid $mainColor !important;
+    width: 50%;
+    text-align: right;
+
+    .form-group {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
+// sytart search bar
+.search-bar {
+  form {
+    background-color: #E9E9E9;
+    height: 80px;
+    padding: 20px;
+    border-radius: 8px;
+
+    .row {
+
+      .col-lg-5,
+      .col-lg-3,
+      .col-lg-1 {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+
+    .form-group {
+      position: relative;
+
+      .form-control {
+        border-radius: 5px;
+        border: 0;
+        height: calc(1.5em + .75rem + 10px);
+        font-size: 15px;
+      }
+
+      .select-control {
+        padding-right: 25px;
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 18.2%;
+      margin-right: 5px;
+      width: 8.5%;
+      z-index: 2;
+    }
+
+    .car-select,
+    .all-mark {
+      right: 1%;
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 5px;
+      padding: 0 !important;
+      height: calc(1.5em + .75rem + 10px);
+      width: 100%;
+      background-color: $mainColor;
+
+      i {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// start header
+.header {
+  margin-top: 30px;
+
+  .header-slider {
+    .slider-item {
+      background-size: cover;
+      height: 262px;
+      background-position: center;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    .slick-prev,
+    .slick-next {
+      z-index: 999;
+
+      &::before {
+        font-size: 30px;
+      }
+    }
+
+    .slick-prev {
+      left: 30px;
+
+      &::before {
+        @extend %inilizeFontAwesome;
+        content: "\f053";
+      }
+    }
+
+    .slick-next {
+      right: 30px;
+
+      &::before {
+        @extend %inilizeFontAwesome;
+        content: "\f054";
+      }
+    }
+  }
+}
+
+
+// start departments
+.departments {
+  margin-top: 10px;
+
+  .card {
+    margin-top: 40px;
+    border: 0;
+    border-radius: 0;
+    position: relative;
+    padding-bottom: 20px;
+
+    .card-header {
+      color: #fff;
+      border: 0;
+      border-radius: 5px;
+      padding: 8px;
+      padding-top: 10px;
+      position: relative;
+
+      h5 {
+        display: inline-block;
+
+        span {
+          font-size: 17px;
+        }
+
+        img {
+          width: 20px;
+          height: 20px;
+          margin-left: 5px;
+        }
+      }
+
+      .number {
+        position: absolute;
+        left: 10px;
+        border: 1px solid #fff;
+        width: 50px;
+        text-align: center;
+        border-radius: 5px;
+      }
+    }
+
+    .card-body {
+      .depar-links {
+        @extend %linksStyle;
+
+        &:hover {
+          background-color: #1C75BC;
+          color: #fff;
+        }
+      }
+    }
+
+    .plus {
+      position: absolute;
+      bottom: -25px;
+      left: 20px;
+
+      i {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        color: #fff;
+      }
+    }
+  }
+
+  .card-company {
+    border-bottom: 3px solid #1C75BC;
+
+    .card-header {
+      background-color: #1C75BC;
+    }
+
+    .plus {
+      i {
+        background-color: #1C75BC;
+      }
+    }
+  }
+
+  .card-car {
+    border-bottom: 3px solid #CCDF5F;
+
+    .card-header {
+      background-color: #CCDF5F;
+    }
+
+    .plus {
+      i {
+        background-color: #CCDF5F;
+      }
+    }
+  }
+
+  .card-elctr {
+    border-bottom: 3px solid #69BE45;
+
+    .card-header {
+      background-color: #69BE45;
+    }
+
+    .plus {
+      i {
+        background-color: #69BE45;
+      }
+    }
+  }
+
+  .card-animal {
+    border-bottom: 3px solid #626262;
+
+    .card-header {
+      background-color: #626262;
+    }
+
+    .plus {
+      i {
+        background-color: #626262;
+      }
+    }
+  }
+
+  .card-bed {
+    border-bottom: 3px solid #D7127B;
+
+    .card-header {
+      background-color: #D7127B;
+    }
+
+    .plus {
+      i {
+        background-color: #D7127B;
+      }
+    }
+  }
+
+  .card-service {
+    border-bottom: 3px solid #03BBC3;
+
+    .card-header {
+      background-color: #03BBC3;
+    }
+
+    .plus {
+      i {
+        background-color: #03BBC3;
+      }
+    }
+  }
+}
+
+
+// start new-ads
+.special-ads {
+  margin-top: 80px;
+
+  .new-ads-header {
+    h5 {
+      font-size: 30px;
+      color: $mainColor;
+    }
+  }
+
+  .new-ads-slider {
+    .slider-item {
+      overflow: hidden;
+      margin-bottom: 20px;
+      padding: 5px;
+
+      &:focus {
+        outline: 0;
+      }
+
+      .card {
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #ECECEC;
+
+        .card-img {
+          padding: 8px;
+
+          img {
+            height: 150px;
+          }
+        }
+
+        .card-body {
+          .card-text {
+            color: #69BE45;
+          }
+
+          .card-departm {
+            margin-top: 10px;
+
+            a {
+              color: #000;
+              text-decoration: none;
+              font-size: 14px;
+            }
+
+            i {
+              float: right;
+              margin-left: 5px;
+              margin-top: 3px;
+            }
+
+            img {
+              width: 18px;
+              float: right;
+              margin-left: 5px;
+            }
+
+            width: 50%;
+            float: right;
+          }
+        }
+
+        .card-footer {
+          background-color: #ECECEC;
+
+          .price {
+            margin-right: 40px;
+            color: #D7127B;
+          }
+        }
+      }
+    }
+
+    .slick-dots {
+      text-align: center;
+
+      li {
+        width: 10px !important;
+
+        button {
+          width: 5px !important;
+          height: 5px !important;
+          background-color: #c7c7c7;
+          border-radius: 50%;
+
+          &::before {
+            content: none !important;
+          }
+        }
+      }
+
+      .slick-active {
+        button {
+          background-color: $mainColor;
+
+          &::before {
+            content: none !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// start new ads and most-search
+.new-ads-most-search {
+  margin-top: 80px;
+
+  .most-search {
+    .most-search-header {
+      background-color: #F5F5F5;
+      height: 50px;
+      text-align: right;
+      color: #626262;
+
+      h5 {
+        line-height: 50px;
+        font-size: 20px;
+      }
+    }
+
+    .card {
+      border: 0;
+
+      .card-body {
+        .depar-links {
+          @extend %linksStyle;
+        }
+      }
+    }
+
+    .card-space-ads {
+      margin-top: 20px;
+      text-align: center;
+      height: 420px;
+      background-color: #FBFBFB;
+
+      h6 {
+        line-height: 420px;
+      }
+    }
+
+    .card-space-ads-2 {
+      height: 211px;
+
+      h6 {
+        line-height: 211px;
+      }
+    }
+  }
+
+  .new-ads {
+    .card {
+      border: 1px solid #E9E9E9;
+      margin-top: 20px;
+
+      .card-title {
+        font-size: 18px;
+      }
+
+      .card-img {
+        padding: 10px;
+      }
+
+      .card-departm {
+        a {
+          color: #626262;
+          text-decoration: none;
+          font-size: 15px;
+
+          .name {
+            color: #69BE45;
+          }
+        }
+
+        float: right;
+        width: 33.3333%;
+        margin-top: 10px;
+
+        img {
+          width: 20px;
+        }
+      }
+
+      .card-footer {
+        border: 0;
+        background-color: #ECECEC;
+
+        .price {
+          position: absolute;
+          left: 5%;
+          color: #D7127B;
+        }
+      }
+    }
+
+    .card-ads-space {
+      border: 0;
+      margin-top: 20px;
+      text-align: center;
+      height: 191px;
+      background-color: #FBFBFB;
+
+      h6 {
+        line-height: 191px;
+      }
+    }
+  }
+}
+
+
+// staret footer
+footer {
+  margin-top: 100px;
+  background-color: $mainColor;
+  padding-top: 100px;
+
+  .logo-content-logo {
+    img {
+      width: 200px;
+      height: 75px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 30px;
+      margin-top: 15px;
+    }
+  }
+
+  .help-content {
+    ul {
+      margin-top: 30px;
+      list-style-type: square;
+
+      li {
+        margin-top: 5px;
+
+        a {
+          display: inline-block;
+          text-decoration: none;
+          transition: all 0.5s ease !important;
+
+          &:hover {
+            transform: translateX(-5px) !important;
+          }
+        }
+      }
+    }
+  }
+
+  .social-content {
+    .social {
+      i {
+        display: inline-block;
+        color: #fff;
+        line-height: 30px;
+        text-align: center;
+        margin-right: 15px;
+        transition: all 0.5s ease;
+
+        &:hover {
+          color: $mainColor;
+        }
+      }
+    }
+
+    .form-control {
+      display: inline-block;
+      background-color: #fff;
+      margin-top: 15px;
+      border: 0;
+      height: 40px;
+      color: #444 !important;
+      text-align: center;
+      border-radius: 5px;
+
+      &::placeholder {
+        color: #444;
+        opacity: 1;
+        /* Firefox */
+      }
+    }
+
+    .btn {
+      border: 0 !important;
+      border-radius: 5px;
+      border: 1px solid #D7127B;
+      background-color: #D7127B;
+      height: 40px;
+      line-height: 40px;
+      width: 100%;
+      margin-top: 10px;
+      color: #fff;
+      margin-bottom: 10px;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        background-color: #06162a;
+      }
+    }
+  }
+
+  .copy {
+    margin-top: 20px;
+    background-color: $mainColor;
+    height: 65px;
+    line-height: 60px;
+    border-top: 2px solid #0A97B5;
+
+    h5 {
+      margin: 0;
+      font-size: 15px;
+      color: #fff;
+      line-height: 60px;
+    }
+
+    .logo-funun {
+      width: 100%;
+      text-align: left;
+
+      img {
+        width: 20%;
+      }
+    }
+  }
+}
+
+// =======================================================================================================
+// start path
+.path {
+  text-align: right;
+  background-color: #ddd;
+  padding: 20px;
+
+  span {
+    &::before {
+      font-family: "Font Awesome 5 Free";
+      // position: absolute;
+      margin-left: 6px;
+      margin-right: 6px;
+      content: "\f104";
+      font-weight: 900;
+      font-size: 13px;
+    }
+  }
+
+  .first {
+    &::before {
+      content: "" !important;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+
+    &:hover {
+      color: $mainColor;
+    }
+  }
+}
+
+
+// start login-rigister page ==============================================================================================================
+
+.login-rigister {
+  .rigister-login-form {
+    .form-group {
+      .form-control {
+        height: calc(1.5em + .75rem + 10px);
+      }
+    }
+
+    .remember {
+      display: block;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      color: #fff;
+      width: 100px;
+    }
+
+    .btn-login {
+      background-color: #4f94e2;
+      border: 1px solid #4f94e2;
+      margin-bottom: 10px;
+    }
+
+    .btn-rigister {
+      background-color: $mainColor;
+      border: 1px solid $mainColor;
+    }
+  }
+}
+
+
+
+// start my account page =====================================================================================================
+.my-account {
+  .my-account-navs {
+    border: 1px solid #F5F5F5;
+    margin-top: 50px;
+    border-radius: 6px;
+
+    .card-header {
+      background-color: #F5F5F5;
+      font-size: 18px;
+      border-bottom: 0;
+      height: 60px;
+      line-height: 60px;
+      padding: 0;
+      padding-right: 10px;
+    }
+
+    .nav-link {
+      padding: 0px;
+      padding: 0 20px 0 20px;
+      line-height: 65px;
+      border-bottom: 1px solid #F5F5F5;
+      border-radius: 0;
+      color: #555;
+      font-size: 15px;
+      height: 65px;
+
+      img {
+        width: 20px;
+        margin-left: 5px;
+      }
+    }
+
+    .active {
+      // color: #fff;
+      background-color: unset;
+    }
+  }
+
+  .log-out {
+    margin-top: 10px;
+
+    .btn {
+      background-color: #D7127B;
+      color: #fff;
+      width: 100%;
+    }
+  }
+
+  .tab-content {
+    margin-top: 50px;
+
+    .most-search-header {
+      background-color: #F5F5F5;
+      height: 50px;
+      text-align: right;
+      color: #626262;
+      border-radius: 8px;
+
+      h5 {
+        line-height: 50px;
+        font-size: 17px;
+      }
+    }
+
+    .account-info-form {
+      margin-top: 30px;
+
+      .form-group {
+        label {
+          font-size: 15px;
+        }
+
+        .form-control {
+          height: calc(1.5em + .75rem + 6px);
+        }
+      }
+
+      .btn-submit {
+        text-align: center;
+        margin-top: 10px;
+
+        .btn {
+          background-color: $mainColor;
+          color: #fff;
+          width: 40%;
+        }
+      }
+    }
+  }
+
+  .messages {
+    .card {
+      border: 1px solid #F5F5F5;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 25px;
+
+      h5 {
+        font-size: 15px;
+      }
+
+      p {
+        font-size: 13px;
+        color: #626262;
+      }
+    }
+  }
+}
+
+.search-and-search-result {
+  .card-search {
+    margin-top: 50px;
+
+    .card-header {
+      border: 0;
+      margin-bottom: 10px;
+    }
+
+    .search-form {
+      padding: 10px;
+
+      .form-group {
+        .form-control {
+          font-size: 13px;
+        }
+      }
+
+      .btn-submit {
+        .btn {
+          background-color: $mainColor;
+          color: #fff;
+          width: 100%;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .new-ads-most-search {
+    margin-top: 50px !important;
+  }
+
+  .arange {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+
+    span {
+      font-size: 15px;
+    }
+
+    .select-arrange {
+      border-radius: 5px;
+      border: 0;
+      width: 150px;
+      font-size: 13px;
+      padding: 5px;
+    }
+  }
+}
+
+
+
+// stsrt show adds page
+// start show ads
+.show-ads {
+  .slider-top{
+    .item-slide{
+      height: 70vh;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  .slider-bottom{
+    .item-slide{
+      height: 20vh;
+      background-size: cover;
+      background-position: center;
+      &:focus{
+        outline: 0 !important;
+      }
+    }
+  }
+
+  .ads-info {
+    .special-ads {
+      z-index: 3;
+      display: inline-block;
+      position: absolute;
+      background-color: #68bb2b;
+      border: 1px solid #68bb2b;
+      width: 15%;
+      padding: 10px !important;
+      text-align: center;
+      border-radius: 10px;
+      color: #fff;
+      left: 4%;
+      top: 1%;
+    }
+    .ads-header {
+      .header-ads {
+        margin-top: 15px;
+        font-size: 20px;
+        float: right;
+      }
+      .price {
+        color: #fff;
+        padding: 10px;
+        width: 20%;
+        text-align: center;
+        font-size: 20px;
+        float: left;
+        border: 1px solid #ecb000;
+        background-color: #ecb000;
+      }
+    }
+    .table-infor {
+      margin-top: 40px;
+      .table {
+        margin-bottom: 0 !important;
+      }
+      td {
+        padding-right: 40px !important;
+        .question{
+          font-weight: bold;
+        }
+      }
+      h6 {
+        font-size: 22px;
+        color: $mainColor;
+        padding-right: 20px;
+        padding-top: 10px;
+        margin: 10px 0px 20px 0px;
+      }
+      .table-word {
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .options-btn{
+        a{
+          display: inline-block;
+          margin-top: 10px;
+          padding: 0;
+          line-height: 65px;
+          background-color: #F7F7F7;
+          width: 100%;
+          height: 65px;
+          i{
+            margin-left: 5px;
+            color: #444;
+          }
+          &:hover{
+            background-color: $mainColor;
+            color: #fff;
+            i{
+              color: #fff;
+            }
+          }
+        }
+      }
+      .descr {
+        h6 {
+          font-size: 22px;
+          padding-right: 20px;
+          padding-top: 10px;
+          color: $mainColor;
+          margin: 10px 0px 20px 0px;
+        }
+        .desr-par {
+          color: #444;
+          line-height: 30px;
+        }
+      }
+    }
+    .contact-data {
+      .card-header{
+        border: 0;
+      }
+      border: 1px solid #ddd;
+      margin-top: 20px;
+      h6 {
+        font-size: 22px;
+        padding-right: 20px;
+        padding-top: 10px;
+        color: $mainColor;
+        margin: 10px 0px 20px 0px;
+      }
+      ul {
+        padding: 0;
+        padding-right: 20px;
+        li {
+          display: inline-block;
+          margin-left: 20px;
+          i {
+            font-size: 20px;
+            margin-left: 10px;
+            color: #444;
+          }
+          span {
+            font-size: 20px;
+            color: #444;
+          }
+        }
+      }
+    }
+    .social-media {
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+      span {
+        margin-top: 35px;
+        display: inline-block;
+        width: 15%;
+        i {
+          color: #888;
+          font-size: 30px;
+          &:hover {
+            color: $mainColor;
+          }
+        }
+      }
+    }
+    form {
+      margin-top: 50px;
+      input {
+        border: 0;
+        border: 1px solid #ddd;
+        padding: 10px;
+      }
+      button {
+        padding: 10px;
+        background-color: $mainColor;
+        border: 0;
+        border: 1px solid $mainColor;
+        color: #fff;
+      }
+    }
+  }
+
+  .comments {
+    h6 {
+      font-size: 25px;
+      padding-right: 20px;
+      color: $mainColor;
+      padding-top: 10px;
+      margin: 10px 0px 20px 0px;
+      position: relative;
+      i {
+        color: $mainColor;
+        font-size: 25px;
+      }
+    }
+    .on-comment {
+      border: 1px solid #eee;
+      position: relative;
+      padding: 15px;
+      padding-right: 15px;
+      padding-bottom: 2px !important;
+      .com-name {
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .com-word {
+        font-size: 14px;
+        color: #888;
+      }
+      .time {
+        position: absolute;
+        top: 10%;
+        left: 1%;
+        font-size: 10px;
+        color: #444;
+      }
+    }
+  }
+  .add-comment {
+    position: relative;
+    margin-top: 40px;
+    padding-top: 30px;
+    // margin-bottom: 10px;
+    &::before {
+      position: absolute;
+      content: "";
+      top: -1%;
+      // z-index: -1;
+      width: 100%;
+      height: 2px;
+      background-color: #eee;
+    }
+    .head-comment-add {
+      color: #1c75bc;
+      width: 15%;
+      // z-index: 2 !important;
+      background-color: #fff;
+      border: 1px solid #fff;
+      position: absolute;
+      top: -5%;
+      left: 45%;
+      text-align: center;
+      font-size: 15px;
+    }
+    .comment-form {
+      margin-top: 0;
+      .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #eee;
+        height: calc(1.5em + .75rem + 10px);
+        &::placeholder {
+          font-size: 13px;
+        }
+      }
+      .comment-textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #eee;
+        &::placeholder {
+          font-size: 13px;
+        }
+      }
+      button {
+        border: 1px solid #D7127B;
+        background-color: #D7127B;
+        color: #fff;
+        padding: 10px;
+      }
+    }
+  }
+
+  .related-ads {
+    h6 {
+      margin-top: 15px;
+      font-size: 22px;
+      color: $mainColor;
+      i {
+        color: #2b79c3;
+        font-size: 25px;
+      }
+    }
+    .card {
+      margin-top: 20px;
+      .card-img{
+        padding: 10px;
+        img {
+          transition: all 0.5s ease;
+          height: 150px;
+          &:hover {
+            filter: grayscale(100%);
+          }
+        }
+      }
+      .card-body {
+        padding: 10px;
+        .card-departm{
+          margin-top: 10px;
+          width: 50%;
+          float: right;
+          a{
+            color: #000;
+          }
+          span{
+            font-size: 14px;
+          }
+          img{
+            width: 15px;
+          }
+        }
+        .card-title {
+          margin: 0;
+          font-size: 17px;
+          a {
+            color: $mainColor;
+            text-decoration: none;
+            &:hover {
+              color: $mainColor !important;
+            }
+          }
+        }
+        .card-text{
+          margin: 0;
+          a{
+            color: #69BE45;
+            text-decoration: none;
+            font-size: 14px;
+          }
+        }
+      }
+      .card-footer{
+        padding: 0;
+        padding: 10px;
+        .price{
+          margin-right: 60px;
+          color: #D7127B;
+        }
+      }
+    }
+  }
+}
+
+// ====================================================start 7 page ================================================================
+
+// start add ads
+.add-ads-add {
+  margin-bottom: 80px;
+  form {
+    text-align: right;
+    margin-top: 60px;
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: 1px solid #ddd;
+      &::placeholder {
+        font-size: 13px;
+      }
+    }
+    select {
+      background-color: transparent;
+      padding: 5px !important;
+      color: #444;
+      font-size: 14px;
+    }
+    input[type="file"] {
+      border: 0;
+      margin-top: 0;
+    }
+    .add-pic {
+      color: $mainColor;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    button[type="submit"] {
+      border: 1px solid $mainColor;
+      background-color: $mainColor;
+      color: #fff;
+      padding: 8px;
+      border-radius: 5px;
+    }
+  }
+}
+
+.my-profile {
+  form {
+    margin-top: 0 !important;
+  }
+  h5 {
+    text-align: right;
+    margin-top: 60px;
+    color: $mainColor;
+    font-weight: bold;
+  }
+}
+
+// start my-ads
+.my-ads {
+  text-align: right;
+  margin-bottom: 150px;
+  .card {
+    border: 0;
+    margin-top: 50px !important;
+    img{
+      height: 200px;
+    }
+    .card-body {
+      background-color: #f7f6fa;
+      height: 100%;
+      padding: 0 !important;
+      position: relative;
+      h5 {
+        font-size: 18px;
+        color: #44474b;
+        padding: 20px;
+      }
+      span {
+        margin-left: 20px;
+        font-size: 13px;
+        color: $mainColor;
+        padding: 20px;
+        i {
+          font-size: 12px;
+          margin-left: 10px;
+          color: $mainColor;
+        }
+      }
+      .controls {
+        background-color: #efebf9;
+        height: 60px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        line-height: 60px;
+        padding-right: 20px;
+        .button-controls {
+          background-color: $mainColor;
+          border: 1px solid $mainColor;
+          color: #fff;
+        }
+        .price {
+          position: absolute;
+          left: 3%;
+          top: 0%;
+          line-height: 60px;
+          font-size: 16px;
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}
+
+
+// start edit ads
+.edit-ads {
+  text-align: right;
+  margin-top: 70px;
+  margin-bottom: 80px;
+  form {
+    input,
+    select {
+      height: calc(2.5em + 0.75rem + 2px);
+    }
+    label {
+      color: $mainColor;
+      font-weight: bold;
+    }
+    select {
+      font-size: 14px;
+    }
+    input {
+      font-size: 14px;
+    }
+    .file-upload {
+      label {
+        margin-bottom: 0 !important;
+      }
+    }
+    .img-from-file {
+      img {
+        width: 20%;
+      }
+    }
+    button {
+      color: #fff;
+      background-color: $mainColor;
+      border: 1px solid $mainColor;
+      padding: 10px;
+    }
+  }
+}
+
+// start my-inbox
+.my-inbox {
+  text-align: right;
+  margin-top: 60px;
+  margin-bottom: 120px;
+  .card {
+    margin-top: 20px;
+    .card-header {
+      background-color: $mainColor !important;
+      color: #fff;
+      font-size: 18px;
+    }
+    .card-body {
+      .card-title,
+      .card-text {
+        font-size: 15px;
+        i {
+          margin-left: 5px;
+          color: $mainColor;
+        }
+      }
+      .btn-danger {
+        font-size: 13px;
+        i {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+// start blacklist
+.blacklist {
+  text-align: right;
+  margin-top: 90px;
+  margin-bottom: 180px;
+  h5 {
+    color: $mainColor;
+    font-size: 25px;
+  }
+  p {
+    font-size: 15px;
+  }
+  form {
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+    button {
+      margin-top: 15px;
+      width: 120px;
+      background-color: $mainColor;
+      border: 1px solid $mainColor;
+      color: #fff;
+      padding: 10px;
+    }
+  }
+}
+
+// start who-us
+.who-us {
+  margin-top: 80px;
+  margin-bottom: 90px;
+  text-align: right;
+  .who-header {
+    color: $mainColor;
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
+  p {
+    color: #777;
+    .big-word {
+      color: $mainColor;
+      font-size: 23px;
+      font-weight: bold;
+    }
+    line-height: 40px;
+  }
+}
+
+
+
+
+
+// ====================================================end 7 page ================================================================
+
+
+
+@media(max-width: 800px) {
+  .upper-nav {
+    .login {
+      text-align: right;
+    }
+    .my-account-option {
+      width: 100%;
+    }
+  }
+
+  .search-bar {
+    form {
+      height: auto;
+
+      .row {
+
+        .col-lg-5,
+        .col-lg-3,
+        .col-lg-1 {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      }
+
+      img {
+        top: 14.2%;
+      }
+
+      .car-select,
+      .all-mark {
+        right: 3%;
+      }
+    }
+  }
+
+  .copy {
+    height: auto !important;
+
+    .logo-funun {
+      text-align: right !important;
+    }
+  }
+  .related-ads{
+    .card{
+      .card-img{
+        img{
+          height: 300px !important;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media(max-width: 524px) {
+  .search-bar {
+    form {
+      height: auto;
+
+      .row {
+
+        .col-lg-5,
+        .col-lg-3,
+        .col-lg-1 {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      }
+
+      img {
+        width: 7%;
+      }
+    }
+  }
+  .related-ads{
+    .card{
+      .card-img{
+        img{
+          height: 200px !important;
+        }
+      }
+    }
+  }
+  .show-ads{
+    .ads-info{
+      .ads-header {
+        .price{
+          display: inline-block;
+          float: none;
+          width: 40%;
+        }
+      }
+      .special-ads{
+        top: 2%;
+      }
+    } 
+  } 
+}
+
+
+
+%inilizeFontAwesome {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+%linksStyle {
+  display: inline-block;
+  font-size: 13px;
+  color: #626262;
+  background-color: #ECECEC;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 5px;
+  text-decoration: none;
+  margin-left: 6px;
+  transition: .5s;
+}
