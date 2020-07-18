@@ -282,6 +282,16 @@ img {
 // start departments
 .departments {
   margin-top: 10px;
+
+  .card-active {
+    background-color: #fff;
+    padding: 10px;
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    border: 1px solid #000;
+  }
+
   .card {
     margin-top: 40px;
     border: 0;
@@ -289,7 +299,8 @@ img {
     position: relative;
     padding-bottom: 40px;
     height: 195px;
-    transition: all 1s ease-in-out;
+    transition: all .4s ease-in-out;
+
     .card-header {
       color: #fff;
       border: 0;
@@ -325,6 +336,7 @@ img {
     .card-body {
       overflow: hidden;
       transition: all 1s ease-in-out;
+
       .depar-links {
         @extend %linksStyle;
 
@@ -341,6 +353,7 @@ img {
       left: 20px;
       cursor: pointer;
       transition: all 1s ease-in-out;
+
       i {
         width: 50px;
         height: 50px;
@@ -658,6 +671,7 @@ footer {
   background-color: $mainColor;
   padding-top: 100px;
 
+
   .logo-content-logo {
     img {
       width: 200px;
@@ -731,7 +745,7 @@ footer {
       border: 1px solid #D7127B;
       background-color: #D7127B;
       height: 40px;
-      line-height: 40px;
+      line-height: 30px;
       width: 100%;
       margin-top: 10px;
       color: #fff;
@@ -740,6 +754,19 @@ footer {
 
       &:hover {
         background-color: #06162a;
+      }
+    }
+  }
+
+  .download-app {
+    ul {
+      li {
+        list-style-type: none;
+
+        img {
+          margin-bottom: 10px;
+          height: 55px;
+        }
       }
     }
   }
@@ -1009,24 +1036,28 @@ footer {
 // stsrt show adds page
 // start show ads
 .show-ads {
-  .slider-top{
-    .item-slide{
-      img{
+  .slider-top {
+    .item-slide {
+      img {
         width: auto;
         margin: auto;
         height: 400px;
         max-height: auto;
       }
-      &:focus{
+
+      &:focus {
         outline: 0 !important;
       }
     }
-    .slick-arrow{
+
+    .slick-arrow {
       // top: 90%;
     }
+
     .slick-prev {
       left: 0;
       z-index: 99;
+
       &::before {
         @extend %initlizeFonAwesomeAfter;
         @extend %headerArrows;
@@ -1034,9 +1065,11 @@ footer {
         font-size: 15px;
       }
     }
+
     .slick-next {
       right: 2.5%;
       bottom: 0;
+
       &::before {
         @extend %initlizeFonAwesomeAfter;
         @extend %headerArrows;
@@ -1046,16 +1079,19 @@ footer {
     }
   }
 
-  .slider-bottom{
+  .slider-bottom {
     margin-top: 10px;
-    .slick-track{
+
+    .slick-track {
       transform: translate(0) !important;
     }
-    .item-slide{
+
+    .item-slide {
       height: 130px;
       background-size: cover;
       background-position: center;
-      &:focus{
+
+      &:focus {
         outline: 0 !important;
       }
     }
@@ -1076,12 +1112,14 @@ footer {
       left: 10%;
       top: 1%;
     }
+
     .ads-header {
       .header-ads {
         margin-top: 15px;
         font-size: 20px;
         float: right;
       }
+
       .price {
         color: #fff;
         padding: 10px;
@@ -1093,17 +1131,22 @@ footer {
         background-color: #ecb000;
       }
     }
+
     .table-infor {
       margin-top: 40px;
+
       .table {
         margin-bottom: 0 !important;
       }
+
       td {
         padding-right: 40px !important;
-        .question{
+
+        .question {
           font-weight: bold;
         }
       }
+
       h6 {
         font-size: 22px;
         color: $mainColor;
@@ -1111,12 +1154,14 @@ footer {
         padding-top: 10px;
         margin: 10px 0px 20px 0px;
       }
+
       .table-word {
         margin: 0 !important;
         padding: 0 !important;
       }
-      .options-btn{
-        a{
+
+      .options-btn {
+        a {
           display: inline-block;
           margin-top: 10px;
           padding: 0;
@@ -1124,19 +1169,23 @@ footer {
           background-color: #F7F7F7;
           width: 100%;
           height: 65px;
-          i{
+
+          i {
             margin-left: 5px;
             color: #444;
           }
-          &:hover{
+
+          &:hover {
             background-color: $mainColor;
             color: #fff;
-            i{
+
+            i {
               color: #fff;
             }
           }
         }
       }
+
       .descr {
         h6 {
           font-size: 22px;
@@ -1145,18 +1194,22 @@ footer {
           color: $mainColor;
           margin: 10px 0px 20px 0px;
         }
+
         .desr-par {
           color: #444;
           line-height: 30px;
         }
       }
     }
+
     .contact-data {
-      .card-header{
+      .card-header {
         border: 0;
       }
+
       border: 1px solid #ddd;
       margin-top: 20px;
+
       h6 {
         font-size: 22px;
         padding-right: 20px;
@@ -1164,17 +1217,21 @@ footer {
         color: $mainColor;
         margin: 10px 0px 20px 0px;
       }
+
       ul {
         padding: 0;
         padding-right: 20px;
+
         li {
           display: inline-block;
           margin-left: 20px;
+
           i {
             font-size: 20px;
             margin-left: 10px;
             color: #444;
           }
+
           span {
             font-size: 20px;
             color: #444;
@@ -1182,30 +1239,37 @@ footer {
         }
       }
     }
+
     .social-media {
       text-align: center;
       border-bottom: 1px solid #ddd;
       padding-bottom: 20px;
+
       span {
         margin-top: 35px;
         display: inline-block;
         width: 15%;
+
         i {
           color: #888;
           font-size: 30px;
+
           &:hover {
             color: $mainColor;
           }
         }
       }
     }
+
     form {
       margin-top: 50px;
+
       input {
         border: 0;
         border: 1px solid #ddd;
         padding: 10px;
       }
+
       button {
         padding: 10px;
         background-color: $mainColor;
@@ -1217,11 +1281,17 @@ footer {
   }
 
   .comments {
-    .rebort{
+    .rebort {
       display: inline-block;
       color: $mainColor;
       margin-bottom: 10px;
+
+      span {
+        font-size: 13px;
+        margin-right: 2px;
+      }
     }
+
     h6 {
       font-size: 25px;
       padding-right: 20px;
@@ -1229,25 +1299,30 @@ footer {
       padding-top: 10px;
       margin: 10px 0px 20px 0px;
       position: relative;
+
       i {
         color: $mainColor;
         font-size: 25px;
       }
     }
+
     .on-comment {
       border: 1px solid #eee;
       position: relative;
       padding: 15px;
       padding-right: 15px;
       padding-bottom: 2px !important;
+
       .com-name {
         font-size: 15px;
         font-weight: bold;
       }
+
       .com-word {
         font-size: 14px;
         color: #888;
       }
+
       .time {
         position: absolute;
         top: 10%;
@@ -1257,10 +1332,12 @@ footer {
       }
     }
   }
+
   .add-comment {
     position: relative;
     margin-top: 40px;
     padding-top: 30px;
+
     // margin-bottom: 10px;
     &::before {
       position: absolute;
@@ -1271,6 +1348,7 @@ footer {
       height: 2px;
       background-color: #eee;
     }
+
     .head-comment-add {
       color: #1c75bc;
       width: 15%;
@@ -1283,25 +1361,31 @@ footer {
       text-align: center;
       font-size: 15px;
     }
+
     .comment-form {
       margin-top: 0;
+
       .form-control {
         width: 100%;
         padding: 10px;
         border: 1px solid #eee;
         height: calc(1.5em + .75rem + 10px);
+
         &::placeholder {
           font-size: 13px;
         }
       }
+
       .comment-textarea {
         width: 100%;
         padding: 10px;
         border: 1px solid #eee;
+
         &::placeholder {
           font-size: 13px;
         }
       }
+
       button {
         border: 1px solid #D7127B;
         background-color: #D7127B;
@@ -1316,63 +1400,80 @@ footer {
       margin-top: 15px;
       font-size: 22px;
       color: $mainColor;
+
       i {
         color: #2b79c3;
         font-size: 25px;
       }
     }
+
     .card {
       margin-top: 20px;
-      .card-img{
+
+      .card-img {
         padding: 10px;
+
         img {
           transition: all 0.5s ease;
           height: 150px;
+
           &:hover {
             filter: grayscale(100%);
           }
         }
       }
+
       .card-body {
         padding: 10px;
-        .card-departm{
+
+        .card-departm {
           margin-top: 10px;
           width: 50%;
           float: right;
-          a{
+
+          a {
             color: #000;
           }
-          span{
+
+          span {
             font-size: 14px;
           }
-          img{
+
+          img {
             width: 15px;
           }
         }
+
         .card-title {
           margin: 0;
           font-size: 17px;
+
           a {
             color: $mainColor;
             text-decoration: none;
+
             &:hover {
               color: $mainColor !important;
             }
           }
         }
-        .card-text{
+
+        .card-text {
           margin: 0;
-          a{
+
+          a {
             color: #69BE45;
             text-decoration: none;
             font-size: 14px;
           }
         }
       }
-      .card-footer{
+
+      .card-footer {
         padding: 0;
         padding: 10px;
-        .price{
+
+        .price {
           margin-right: 60px;
           color: #D7127B;
         }
@@ -1385,12 +1486,25 @@ footer {
 
 // start add ads
 .add-ads-add {
-  width: 90%;
+  width: 100%;
   margin: auto;
   margin-bottom: 80px;
+
+  .card-header {
+    margin-top: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #F5F5F5;
+    padding: 15px;
+  }
+
   form {
     text-align: right;
-    margin-top: 60px;
+    margin-top: 20px;
+
     input,
     select,
     textarea {
@@ -1398,25 +1512,32 @@ footer {
       padding: 12px;
       margin-top: 10px;
       border: 1px solid #ddd;
+
+      // border-radius: 5px;
       &::placeholder {
         font-size: 13px;
       }
     }
+
     select {
       background-color: transparent;
       padding: 5px !important;
       color: #444;
       font-size: 14px;
+      border-radius: 10px;
     }
+
     input[type="file"] {
       border: 0;
       margin-top: 0;
     }
+
     .add-pic {
       color: $mainColor;
       margin-top: 20px;
       font-weight: bold;
     }
+
     button[type="submit"] {
       border: 1px solid $mainColor;
       background-color: $mainColor;
@@ -1425,12 +1546,38 @@ footer {
       border-radius: 5px;
     }
   }
+
+  .form-group {
+    label {
+      margin-bottom: 0;
+      font-size: 14px;
+      font-weight: bold;
+      color: #666;
+    }
+
+    .form-control {
+      border-radius: 6px;
+    }
+  }
+
+  .add-iframe {
+    border-radius: 6px;
+    width: 100%;
+    height: 120px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .btn-add-submit {
+    width: 150px;
+  }
 }
 
 .my-profile {
   form {
     margin-top: 0 !important;
   }
+
   h5 {
     text-align: right;
     margin-top: 60px;
@@ -1443,33 +1590,40 @@ footer {
 .my-ads {
   text-align: right;
   margin-bottom: 150px;
+
   .card {
     border: 0;
     margin-top: 50px !important;
-    img{
+
+    img {
       height: 200px;
     }
+
     .card-body {
       background-color: #f7f6fa;
       height: 100%;
       padding: 0 !important;
       position: relative;
+
       h5 {
         font-size: 18px;
         color: #44474b;
         padding: 20px;
       }
+
       span {
         margin-left: 20px;
         font-size: 13px;
         color: $mainColor;
         padding: 20px;
+
         i {
           font-size: 12px;
           margin-left: 10px;
           color: $mainColor;
         }
       }
+
       .controls {
         background-color: #efebf9;
         height: 60px;
@@ -1478,11 +1632,13 @@ footer {
         width: 100%;
         line-height: 60px;
         padding-right: 20px;
+
         .button-controls {
           background-color: $mainColor;
           border: 1px solid $mainColor;
           color: #fff;
         }
+
         .price {
           position: absolute;
           left: 3%;
@@ -1502,31 +1658,39 @@ footer {
   text-align: right;
   margin-top: 70px;
   margin-bottom: 80px;
+
   form {
+
     input,
     select {
       height: calc(2.5em + 0.75rem + 2px);
     }
+
     label {
       color: $mainColor;
       font-weight: bold;
     }
+
     select {
       font-size: 14px;
     }
+
     input {
       font-size: 14px;
     }
+
     .file-upload {
       label {
         margin-bottom: 0 !important;
       }
     }
+
     .img-from-file {
       img {
         width: 20%;
       }
     }
+
     button {
       color: #fff;
       background-color: $mainColor;
@@ -1541,24 +1705,31 @@ footer {
   text-align: right;
   margin-top: 60px;
   margin-bottom: 120px;
+
   .card {
     margin-top: 20px;
+
     .card-header {
       background-color: $mainColor !important;
       color: #fff;
       font-size: 18px;
     }
+
     .card-body {
+
       .card-title,
       .card-text {
         font-size: 15px;
+
         i {
           margin-left: 5px;
           color: $mainColor;
         }
       }
+
       .btn-danger {
         font-size: 13px;
+
         i {
           margin-left: 5px;
         }
@@ -1572,22 +1743,27 @@ footer {
   text-align: right;
   margin-top: 90px;
   margin-bottom: 180px;
+
   h5 {
     color: $mainColor;
     font-size: 25px;
   }
+
   p {
     font-size: 15px;
   }
+
   form {
     input {
       width: 100%;
       padding: 10px;
       border: 1px solid #ddd;
+
       &::placeholder {
         font-size: 14px;
       }
     }
+
     button {
       margin-top: 15px;
       width: 120px;
@@ -1604,18 +1780,22 @@ footer {
   margin-top: 80px;
   margin-bottom: 90px;
   text-align: right;
+
   .who-header {
     color: $mainColor;
     font-size: 25px;
     margin-bottom: 25px;
   }
+
   p {
     color: #777;
+
     .big-word {
       color: $mainColor;
       font-size: 23px;
       font-weight: bold;
     }
+
     line-height: 40px;
   }
 }
@@ -1633,6 +1813,7 @@ footer {
     .login {
       text-align: right;
     }
+
     .my-account-option {
       width: 100%;
     }
@@ -1670,10 +1851,11 @@ footer {
       text-align: right !important;
     }
   }
-  .related-ads{
-    .card{
-      .card-img{
-        img{
+
+  .related-ads {
+    .card {
+      .card-img {
+        img {
           height: 300px !important;
         }
       }
@@ -1703,45 +1885,56 @@ footer {
       }
     }
   }
-  .related-ads{
-    .card{
-      .card-img{
-        img{
+
+  .related-ads {
+    .card {
+      .card-img {
+        img {
           height: 200px !important;
         }
       }
     }
   }
-  .show-ads{
-    .ads-info{
+
+  .show-ads {
+    .ads-info {
       .ads-header {
-        .price{
+        .price {
           display: inline-block;
           float: none;
-          width: 40%;
+          width: 100%;
+          margin-top: 10px
         }
       }
-      .special-ads{
+
+      .special-ads {
         top: 2%;
       }
-    } 
-  } 
-  .special-ads .new-ads-slider .slider-item .card .card-img img{
+    }
+  }
+
+  .special-ads .new-ads-slider .slider-item .card .card-img img {
     height: auto;
   }
-  .show-ads .slider-top .item-slide img{
+
+  .show-ads .slider-top .item-slide img {
     height: auto;
   }
-  .show-ads .slider-bottom .item-slide{
+
+  .show-ads .slider-bottom .item-slide {
     height: 80px;
   }
-  .show-ads .slider-top .slick-arrow{
+
+  .show-ads .slider-top .slick-arrow {
     top: 80%;
   }
-  .show-ads .slider-top .slick-next{
+
+  .show-ads .slider-top .slick-next {
     right: 5%;
   }
-  .show-ads .slider-top .slick-prev::before, .show-ads .slider-top .slick-next::before{
+
+  .show-ads .slider-top .slick-prev::before,
+  .show-ads .slider-top .slick-next::before {
     width: 35px;
     height: 35px;
     line-height: 35px;

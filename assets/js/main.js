@@ -71,11 +71,13 @@ $(document).ready(function () {
     plusBtn.forEach((plus, index) => {
       plus.addEventListener('click', () => {
         if($(plus).hasClass('hide')){
+          departmentCard[index].classList.add('card-active');
           departmentCard[index].style.height = "auto";
           departmentCardBody[index].style.overflow = "visible";
           plus.innerHTML = `<i class='fas fa-minus'></i>`
           plus.classList.toggle('hide');
         }else{
+          departmentCard[index].classList.remove('card-active');
           departmentCard[index].style.height = "195px";
           departmentCardBody[index].style.overflow = "hidden";
           plus.innerHTML = `<i class='fas fa-plus'></i>`

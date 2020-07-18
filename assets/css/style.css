@@ -215,6 +215,14 @@ img {
 .departments {
   margin-top: 10px;
 }
+.departments .card-active {
+  background-color: #fff;
+  padding: 10px;
+  border-top-left-radius: 15px !important;
+  border-top-right-radius: 15px !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border: 1px solid #000;
+}
 .departments .card {
   margin-top: 40px;
   border: 0;
@@ -222,7 +230,7 @@ img {
   position: relative;
   padding-bottom: 40px;
   height: 195px;
-  transition: all 1s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .departments .card .card-header {
   color: #fff;
@@ -545,7 +553,7 @@ footer .social-content .btn {
   border: 1px solid #D7127B;
   background-color: #D7127B;
   height: 40px;
-  line-height: 40px;
+  line-height: 30px;
   width: 100%;
   margin-top: 10px;
   color: #fff;
@@ -554,6 +562,13 @@ footer .social-content .btn {
 }
 footer .social-content .btn:hover {
   background-color: #06162a;
+}
+footer .download-app ul li {
+  list-style-type: none;
+}
+footer .download-app ul li img {
+  margin-bottom: 10px;
+  height: 55px;
 }
 footer .copy {
   margin-top: 20px;
@@ -936,6 +951,10 @@ footer .copy .logo-funun img {
   color: #03BBC3;
   margin-bottom: 10px;
 }
+.show-ads .comments .rebort span {
+  font-size: 13px;
+  margin-right: 2px;
+}
 .show-ads .comments h6 {
   font-size: 25px;
   padding-right: 20px;
@@ -1088,13 +1107,23 @@ footer .copy .logo-funun img {
 }
 
 .add-ads-add {
-  width: 90%;
+  width: 100%;
   margin: auto;
   margin-bottom: 80px;
 }
+.add-ads-add .card-header {
+  margin-top: 60px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 17px;
+  border: 0;
+  border-radius: 6px;
+  background-color: #F5F5F5;
+  padding: 15px;
+}
 .add-ads-add form {
   text-align: right;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 .add-ads-add form input,
 .add-ads-add form select,
@@ -1114,6 +1143,7 @@ footer .copy .logo-funun img {
   padding: 5px !important;
   color: #444;
   font-size: 14px;
+  border-radius: 10px;
 }
 .add-ads-add form input[type=file] {
   border: 0;
@@ -1130,6 +1160,25 @@ footer .copy .logo-funun img {
   color: #fff;
   padding: 8px;
   border-radius: 5px;
+}
+.add-ads-add .form-group label {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+}
+.add-ads-add .form-group .form-control {
+  border-radius: 6px;
+}
+.add-ads-add .add-iframe {
+  border-radius: 6px;
+  width: 100%;
+  height: 120px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.add-ads-add .btn-add-submit {
+  width: 150px;
 }
 
 .my-profile form {
@@ -1365,7 +1414,8 @@ footer .copy .logo-funun img {
   .show-ads .ads-info .ads-header .price {
     display: inline-block;
     float: none;
-    width: 40%;
+    width: 100%;
+    margin-top: 10px;
   }
   .show-ads .ads-info .special-ads {
     top: 2%;
@@ -1391,7 +1441,8 @@ footer .copy .logo-funun img {
     right: 5%;
   }
 
-  .show-ads .slider-top .slick-prev::before, .show-ads .slider-top .slick-next::before {
+  .show-ads .slider-top .slick-prev::before,
+.show-ads .slider-top .slick-next::before {
     width: 35px;
     height: 35px;
     line-height: 35px;
