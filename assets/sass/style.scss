@@ -282,14 +282,14 @@ img {
 // start departments
 .departments {
   margin-top: 10px;
-
   .card {
     margin-top: 40px;
     border: 0;
     border-radius: 0;
     position: relative;
-    padding-bottom: 20px;
-
+    padding-bottom: 40px;
+    height: 195px;
+    transition: all 1s ease-in-out;
     .card-header {
       color: #fff;
       border: 0;
@@ -323,6 +323,8 @@ img {
     }
 
     .card-body {
+      overflow: hidden;
+      transition: all 1s ease-in-out;
       .depar-links {
         @extend %linksStyle;
 
@@ -337,7 +339,8 @@ img {
       position: absolute;
       bottom: -25px;
       left: 20px;
-
+      cursor: pointer;
+      transition: all 1s ease-in-out;
       i {
         width: 50px;
         height: 50px;
@@ -1008,15 +1011,48 @@ footer {
 .show-ads {
   .slider-top{
     .item-slide{
-      height: 70vh;
-      background-size: cover;
-      background-position: center;
+      img{
+        width: auto;
+        margin: auto;
+        height: 400px;
+        max-height: auto;
+      }
+      &:focus{
+        outline: 0 !important;
+      }
+    }
+    .slick-arrow{
+      // top: 90%;
+    }
+    .slick-prev {
+      left: 0;
+      z-index: 99;
+      &::before {
+        @extend %initlizeFonAwesomeAfter;
+        @extend %headerArrows;
+        content: "\f053";
+        font-size: 15px;
+      }
+    }
+    .slick-next {
+      right: 2.5%;
+      bottom: 0;
+      &::before {
+        @extend %initlizeFonAwesomeAfter;
+        @extend %headerArrows;
+        content: "\f054";
+        font-size: 15px;
+      }
     }
   }
 
   .slider-bottom{
+    margin-top: 10px;
+    .slick-track{
+      transform: translate(0) !important;
+    }
     .item-slide{
-      height: 20vh;
+      height: 130px;
       background-size: cover;
       background-position: center;
       &:focus{
@@ -1037,7 +1073,7 @@ footer {
       text-align: center;
       border-radius: 10px;
       color: #fff;
-      left: 4%;
+      left: 10%;
       top: 1%;
     }
     .ads-header {
@@ -1181,6 +1217,11 @@ footer {
   }
 
   .comments {
+    .rebort{
+      display: inline-block;
+      color: $mainColor;
+      margin-bottom: 10px;
+    }
     h6 {
       font-size: 25px;
       padding-right: 20px;
@@ -1344,6 +1385,8 @@ footer {
 
 // start add ads
 .add-ads-add {
+  width: 90%;
+  margin: auto;
   margin-bottom: 80px;
   form {
     text-align: right;
@@ -1683,6 +1726,27 @@ footer {
       }
     } 
   } 
+  .special-ads .new-ads-slider .slider-item .card .card-img img{
+    height: auto;
+  }
+  .show-ads .slider-top .item-slide img{
+    height: auto;
+  }
+  .show-ads .slider-bottom .item-slide{
+    height: 80px;
+  }
+  .show-ads .slider-top .slick-arrow{
+    top: 80%;
+  }
+  .show-ads .slider-top .slick-next{
+    right: 5%;
+  }
+  .show-ads .slider-top .slick-prev::before, .show-ads .slider-top .slick-next::before{
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+  }
 }
 
 
@@ -1703,4 +1767,20 @@ footer {
   text-decoration: none;
   margin-left: 6px;
   transition: .5s;
+}
+
+
+%initlizeFonAwesomeAfter {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+%headerArrows {
+  display: inline-block;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: $mainColor;
 }

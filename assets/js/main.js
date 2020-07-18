@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
   $('.header-slider').slick();
 
@@ -12,8 +12,7 @@ $(document).ready(function(){
     loop: true,
     arrows: false,
     infinite: true,
-    responsive: [
-      {
+    responsive: [{
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
@@ -45,7 +44,7 @@ $(document).ready(function(){
   $('.slider-top').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
+    arrows: true,
     fade: true,
     dots: false,
     asNavFor: '.slider-bottom'
@@ -60,8 +59,35 @@ $(document).ready(function(){
   });
 
 
-  AOS.init(); 
+  AOS.init();
+
+
+  if ($('.departments').length) {
+    let plusBtn = document.querySelectorAll('.departments .card .plus');
+    let departmentCard = document.querySelectorAll('.departments .card');
+    let departmentCardBody = document.querySelectorAll('.departments .card .card-body');
+    let openDepartmentCard = false;
+
+    plusBtn.forEach((plus, index) => {
+      plus.addEventListener('click', () => {
+        if($(plus).hasClass('hide')){
+          departmentCard[index].style.height = "auto";
+          departmentCardBody[index].style.overflow = "visible";
+          plus.innerHTML = `<i class='fas fa-minus'></i>`
+          plus.classList.toggle('hide');
+        }else{
+          departmentCard[index].style.height = "195px";
+          departmentCardBody[index].style.overflow = "hidden";
+          plus.innerHTML = `<i class='fas fa-plus'></i>`
+          plus.classList.toggle('hide');
+        }
+      })
+    })
+
+  }
 
 });
 
-
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
